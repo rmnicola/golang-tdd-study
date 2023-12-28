@@ -33,5 +33,8 @@
 10. O `t.Helper()` é só uma função que indica para o módulo de testes que a
     função em que o `Helper` foi chamado não é uma função de teste em si, mas
     apenas uma rotina de auxílio. Sem esse helper, quando o código falha dentro
-    de uma função auxiliar, é impossível pro dev saber em qual dos testes a
-    falha aconteceu. Noice2.
+    de uma função auxiliar, é mais difícil pro dev saber em qual lugar a falha
+    aconteceu. Noice2.
+11. Os operadores lógicos de Go são iguais a C? Até agora tudo indica que sim
+12. Não é possível inicializar uma variável vazia sem definir o seu tipo. Todas
+    as variáveis inicializadas começam com valores nulos (nunca lixo).
