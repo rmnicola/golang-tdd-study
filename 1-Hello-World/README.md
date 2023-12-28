@@ -38,3 +38,4 @@
 11. Os operadores lógicos de Go são iguais a C? Até agora tudo indica que sim
 12. Não é possível inicializar uma variável vazia sem definir o seu tipo. Todas
     as variáveis inicializadas começam com valores nulos (nunca lixo).
+13. Quando usa o `switch`, não precisa de um `default`.

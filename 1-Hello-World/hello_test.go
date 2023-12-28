@@ -9,25 +9,25 @@ func TestHello(t *testing.T) {
 		AssertCorrectMsg(t, have, want)
 	})
 
-	t.Run("...with empty string as a name", func(t *testing.T) {
+	t.Run("Hello with empty string as a name", func(t *testing.T) {
 		have := Hello("", "English")
 		want := "Hello, World!"
 		AssertCorrectMsg(t, have, want)
 	})
 
-	t.Run("...with empty string as a lang", func(t *testing.T) {
+	t.Run("Hello with empty string as a lang", func(t *testing.T) {
 		have := Hello("John", "")
 		want := "Hello, John!"
 		AssertCorrectMsg(t, have, want)
 	})
 
-	t.Run("...in portuguese", func(t *testing.T) {
+	t.Run("Hello in portuguese", func(t *testing.T) {
 		have := Hello("João", "Portuguese")
 		want := "Olá, João!"
 		AssertCorrectMsg(t, have, want)
 	})
 
-	t.Run("...in french", func(t *testing.T) {
+	t.Run("Hello in french", func(t *testing.T) {
 		have := Hello("Jacques", "French")
 		want := "Bonjour, Jacques!"
 		AssertCorrectMsg(t, have, want)

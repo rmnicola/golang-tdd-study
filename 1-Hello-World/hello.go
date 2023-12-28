@@ -14,27 +14,24 @@ const fr_world = "Monde"
 
 func Hello(name, lang string) string {
 	var prefix string
-	if lang == en_lang || lang == "" {
-		if name == "" {
-			name = en_world
-		}
-		prefix = en_prefix
-	}
-
-	if lang == ptbr_lang {
+	switch lang {
+	case ptbr_lang:
 		if name == "" {
 			name = ptbr_world
 		}
 		prefix = ptbr_prefix
-	}
-
-	if lang == fr_lang {
+	case fr_lang:
 		if name == "" {
 			name = fr_world
 		}
 		prefix = fr_prefix
-	}
+	default:
+		if name == "" {
+			name = en_world
+		}
+		prefix = en_prefix
 
+	}
 	return prefix + name + "!"
 }
 
