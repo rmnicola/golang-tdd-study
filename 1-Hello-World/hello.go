@@ -2,24 +2,28 @@ package main
 
 import "fmt"
 
-const prefix_eng = "Hello, "
-const prefix_ptbr = "Olá, "
+const en_lang = "English"
+const en_prefix = "Hello, "
+const en_world = "World"
+const ptbr_lang = "Portuguese"
+const ptbr_prefix = "Olá, "
+const ptbr_world = "Mundo"
 
 func Hello(name, lang string) string {
-  var prefix string
-	if lang == "English" || lang == "" {
+	var prefix string
+	if lang == en_lang || lang == "" {
 		if name == "" {
-			name = "World"
+			name = en_world
 		}
-    prefix = prefix_eng
+		prefix = en_prefix
 	}
-	if lang == "Portuguese" {
+	if lang == ptbr_lang {
 		if name == "" {
-			name = "Mundo"
+			name = ptbr_world
 		}
-    prefix = prefix_ptbr
+		prefix = ptbr_prefix
 	}
-  return prefix + name + "!"
+	return prefix + name + "!"
 }
 
 func main() {
