@@ -39,3 +39,15 @@
 12. Não é possível inicializar uma variável vazia sem definir o seu tipo. Todas
     as variáveis inicializadas começam com valores nulos (nunca lixo).
 13. Quando usa o `switch`, não precisa de um `default`.
+14. Quando dois argumentos posicionais (nem sei se existe kwarg) em sequência
+    tem o mesmo tipo, você pode declarar tudo de uma vez. Ex: `name string,
+    lang string` pode ser só `name, lang string`
+15. Em Go, funções privadas começam com letra minúscula e públicas, com
+    maiúscula.
+16. Existe pattern matching em Go (yay)
+17. Existe _ em Go
+18. É possível declarar várias constantes de uma só vez usando `const (x = 3; y
+    = 2)`
+19. É possível criar um padrão de saída para a função em Go (ver função privada
+    no `hello.go`). Quando você faz isso, não precisa definir nada no return e
+    a documentação sai automaticamente no godoc.
