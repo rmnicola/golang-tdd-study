@@ -3,8 +3,11 @@
 1. Go não vai testar nada sem criar um módulo antes. `go mod init
    <nome-do-modulo>`
 2. Go tem uma ferramenta de formatação de código `go fmt`. Ela funciona no
-   projeto todo. É interessante deixar um remap pronto para usá-la. Por
-   enquanto estou definindo localmente como <leader>f
+   projeto todo e é capaz de identificar erros de sintaxe antes de rodar o
+   código. É interessante deixar um remap pronto para usá-la. Por enquanto
+   estou definindo localmente como <leader>f. A ideia é MUITO boa. Se a
+   linguagem já traz uma ferramenta de formatação tão opinionada como o `go
+   fmt`, não existe mais discussão de coding style.
 3. Testes em Go tem algumas regras específicas:
     * Precisa estar em arquivos com o padrão `XXX_test.go`
     * As funções de teste precisam começar com `Test`
@@ -20,3 +23,15 @@
 6. Go usa uma estrutura de formatação de strings similar ao C. Ver
    [doc](https://pkg.go.dev/fmt#hdr-Printing). O `%q` exibe um valor entre
    aspas.
+7. Os tipos das variáveis vem sempre depois do nome. Não sei se gostei disso
+   ainda...
+8. É possível criar subtestes dentro de uma função de teste usando a estrutura
+   `t.Run`, em que um dos argumentos é um `callable` (a função de subteste).
+   Isso me diz que Go permite com facilidade passar funções como argumentos.
+9. Em Go existe algum mecanismo para a criação de interfaces. O `testing.TB` é
+   uma interface que aceita tanto `testing.T` como `testing.B`. Noice.
+10. O `t.Helper()` é só uma função que indica para o módulo de testes que a
+    função em que o `Helper` foi chamado não é uma função de teste em si, mas
+    apenas uma rotina de auxílio. Sem esse helper, quando o código falha dentro
+    de uma função auxiliar, é impossível pro dev saber em qual dos testes a
+    falha aconteceu. Noice2.
