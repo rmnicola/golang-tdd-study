@@ -3,9 +3,17 @@ package iteration
 import "testing"
 
 func TestRepeat(t *testing.T) {
-	have := Repeat("a")
-	want := "aaaaa"
-	assertCorrectOutput(t, have, want)
+	t.Run("Repeat 'a' 3 times", func(t *testing.T) {
+		have := Repeat("a", 3)
+		want := "aaa"
+		assertCorrectOutput(t, have, want)
+	})
+}
+
+func BenchmarkRepeat(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Repeat("a", 5)
+	}
 }
 
 func assertCorrectOutput(t testing.TB, have, want string) {
