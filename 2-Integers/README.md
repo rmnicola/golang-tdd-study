@@ -12,4 +12,6 @@ Go](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-proj
    primariamente como documentação, mas serve como teste também. Ele
    automaticamente aparece no `godoc` e seu output é testado quando há um
    comentário tipo `// Output: 7`. Me parece uma ótima ideia uma
-   documentação baseada em testes. 
+   documentação baseada em testes. Neste
+   [link](https://pkg.go.dev/github.com/quii/learn-go-with-tests/integers/v2)
+   está um exemplo de como ficaria a documentação criada nessa seção.
