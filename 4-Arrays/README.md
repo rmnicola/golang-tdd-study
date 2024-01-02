@@ -24,3 +24,6 @@
 11. A função built-in `append` age de forma similar ao método de Python. A
     diferença é que ela retorna um slice, em vez de ser um método que atua
     in-place
+12. Slices em Go parecem funcionar de forma similar a Python, apenas com uma
+    pequena diferença de sintaxe (não se usa , ). Também não existem índices
+    negativos.
