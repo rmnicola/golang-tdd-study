@@ -31,3 +31,29 @@
     sintaxe. Harsh
 14. Realmente é possível usar uma declaração de função inline da mesma forma
     que um `lambda` de Python.
+15. Go’s arrays are values. An array variable denotes the entire array; it is
+    not a pointer to the first array element (as would be the case in C). This
+    means that when you assign or pass around an array value you will make a
+    copy of its contents. (To avoid the copy you could pass a pointer to the
+    array, but then that’s a pointer to an array, not an array.) One way to
+    think about arrays is as a sort of struct but with indexed rather than
+    named fields: a fixed-size composite value. -> Este trecho do blog post
+    sobre slices indica que não existe `pointer decay` em Go, como há em C. No
+    entanto, toda vez que passamos um slice como parâmetro vai uma cópia dele.
+16. Lendo o [blogpost sobre slices](https://go.dev/blog/slices-intro), confirmo
+    que o `make` atua com alocação dinâmica de memória. Sendo assim, seu uso
+    estaria diretamente relacionado à performance de aplicações onde um array
+    deve "crescer" aos poucos. Sendo assim, a solução usando `append` não é a
+    mais eficiente.
+17. Sempre que se usa uma operação de slicing, o resultado é um slice. Um slice
+    de um array é um... slice. Parece óbvio quando coloco dessa forma...
+18. Um slice continua sendo composto por memória contígua. Isso significa que
+    quando usamos um append para fazer um slice crescer além da sua capacidade,
+    ele deve ser realocado completamente. No entanto, se não usarmos `append`
+    para fazer um slice crescer além de sua capacidade, vamos ter um `runtime
+    panic`.
+19. Quando fazemos uma operação de slicing, o resultado é um ponteiro que
+    aponta para o começo do slice e o tamanho do slice. Sendo assim, é uma
+    operação bastante eficiente.
+20. Utilizar `...` após um slice ou array expande o slice em itens (similar ao
+    `*` em Python)
