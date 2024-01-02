@@ -3,13 +3,6 @@ package main
 import "testing"
 
 func TestSum(t *testing.T) {
-	t.Run("collection of exactly 5 numbers", func(t *testing.T) {
-		numbers := []int{1, 2, 3, 4, 5}
-		have := Sum(numbers)
-		want := 15
-		assertCorrectSum(t, have, want, numbers)
-	})
-
 	t.Run("collection of any size", func(t *testing.T) {
 		numbers := []int{1, 2, 3}
 		have := Sum(numbers)
