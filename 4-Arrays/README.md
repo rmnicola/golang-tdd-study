@@ -18,3 +18,9 @@
    operadores relacionais com dois arrays ou slices. É possível utilizar o
    `reflect.DeepEqual`, que compara se duas variáveis são exatamente a mesma
    coisa.
+9. É possível criar slices pré-inicializados utilizando a função `make`.
+10. Utilizando `...`, é possível definir um ou mais parâmetros de mesmo tipo
+    como argumentos de uma função.
+11. A função built-in `append` age de forma similar ao método de Python. A
+    diferença é que ela retorna um slice, em vez de ser um método que atua
+    in-place
