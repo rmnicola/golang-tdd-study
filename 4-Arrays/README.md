@@ -27,3 +27,7 @@
 12. Slices em Go parecem funcionar de forma similar a Python, apenas com uma
     pequena diferença de sintaxe (não se usa , ). Também não existem índices
     negativos.
+13. Não usar else na mesma linha em que fecha as chaves do if é um erro de
+    sintaxe. Harsh
+14. Realmente é possível usar uma declaração de função inline da mesma forma
+    que um `lambda` de Python.
