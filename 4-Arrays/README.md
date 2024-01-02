@@ -14,3 +14,7 @@
    diferentes. [5]int é completamente incompatível com [4]int.
 6. Slices tem praticamente a mesma sintaxe de arrays sem tamanho definido em C.
 7. É possível checar a cobertura de testes usando `go test -cover`
+8. Assim como em praticamente qualquer outra linguagem, é impossível utilizar
+   operadores relacionais com dois arrays ou slices. É possível utilizar o
+   `reflect.DeepEqual`, que compara se duas variáveis são exatamente a mesma
+   coisa.
