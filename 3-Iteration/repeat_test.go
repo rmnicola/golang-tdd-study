@@ -18,10 +18,9 @@ func BenchmarkRepeat(b *testing.B) {
 }
 
 func ExampleRepeat() {
-    output := Repeat("x", 5)
-    fmt.Println(output)
-    // Output: xxxxx
-
+	output := Repeat("x", 5)
+	fmt.Println(output)
+	// Output: xxxxx
 }
 
 func assertCorrectOutput(t testing.TB, have, want string) {
