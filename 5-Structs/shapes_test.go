@@ -14,15 +14,17 @@ func TestPerimeter(t *testing.T) {
 		assertCorrectFloat(t, have, want)
 	}
 
-	t.Run("Perimeter Rect", func(t *testing.T) {
-		rect := Rectangle{2.0, 3.0}
-		checkPerimeter(t, rect, 10.0)
-	})
+	perimeterTests := []struct {
+		shape Shape
+		want  float64
+	}{
+		{Rectangle{2.0, 3.0}, 10.0},
+		{Circle{10.0}, 62.83},
+	}
 
-	t.Run("Perimeter Circle", func(t *testing.T) {
-		circle := Circle{10.0}
-		checkPerimeter(t, circle, 62.83)
-	})
+	for _, testCase := range perimeterTests {
+		checkPerimeter(t, testCase.shape, testCase.want)
+	}
 }
 
 func TestArea(t *testing.T) {
@@ -32,15 +34,18 @@ func TestArea(t *testing.T) {
 		assertCorrectFloat(t, have, want)
 	}
 
-	t.Run("Area Rect", func(t *testing.T) {
-		rect := Rectangle{2.0, 3.0}
-		checkArea(t, rect, 6.0)
-	})
+	areaTests := []struct {
+		shape Shape
+		want  float64
+	}{
+		{Rectangle{2.0, 3.0}, 6.0},
+		{Circle{10.0}, 314.15},
+		{Triangle{2.0, 3.0}, 3.0},
+	}
 
-	t.Run("Area Circle", func(t *testing.T) {
-		circle := Circle{10.0}
-		checkArea(t, circle, 314.15)
-	})
+	for _, testCase := range areaTests {
+		checkArea(t, testCase.shape, testCase.want)
+	}
 }
 
 func assertCorrectFloat(t *testing.T, have, want float64) {
