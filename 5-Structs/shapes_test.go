@@ -18,8 +18,8 @@ func TestPerimeter(t *testing.T) {
 		shape Shape
 		want  float64
 	}{
-		{Rectangle{2.0, 3.0}, 10.0},
-		{Circle{10.0}, 62.83},
+		{shape: Rectangle{Width: 2.0, Height: 3.0}, want: 10.0},
+		{shape: Circle{Radius: 10.0}, want: 62.83},
 	}
 
 	for _, testCase := range perimeterTests {
@@ -38,9 +38,9 @@ func TestArea(t *testing.T) {
 		shape Shape
 		want  float64
 	}{
-		{Rectangle{2.0, 3.0}, 6.0},
-		{Circle{10.0}, 314.15},
-		{Triangle{2.0, 3.0}, 3.0},
+		{shape: Rectangle{Width: 2.0, Height: 3.0}, want: 6.0},
+		{shape: Circle{Radius: 10.0}, want: 314.15},
+		{shape: Triangle{Base: 2.0, Height: 3.0}, want: 3.0},
 	}
 
 	for _, testCase := range areaTests {
